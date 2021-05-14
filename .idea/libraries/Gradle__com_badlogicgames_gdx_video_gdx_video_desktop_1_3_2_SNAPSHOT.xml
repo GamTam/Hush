@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.badlogicgames.gdx-video:gdx-video-desktop:1.3.2-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx-video/gdx-video-desktop/1.3.2-SNAPSHOT/726e362328f38faed7ede5d42b2d7cc8a8cc799e/gdx-video-desktop-1.3.2-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx-video/gdx-video-desktop/1.3.2-SNAPSHOT/621a5357c1cb111634bb7ac7ac2e1a7db074e4ef/gdx-video-desktop-1.3.2-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

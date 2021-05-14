@@ -7,24 +7,29 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.hush.game.UI.Settings;
 
 public class LevelSelect extends ScreenAdapter {
-    Hush game;
+    Settings game;
     ShapeRenderer shapeRenderer;
     SpriteBatch batch;
     Texture selectText;
+    Texture tutorialText;
     Sound sound;
 
     int cursorX;
     int cursorY;
     int selectX = 710;
     int selectY = 750;
+    int tutorialX = 810;
+    int tutorialY = 490;
 
-    public LevelSelect(Hush game) {
+    public LevelSelect(Settings game) {
         this.game = game;
         shapeRenderer = new ShapeRenderer();
         batch = new SpriteBatch();
         selectText = new Texture("selectText.png");
+        tutorialText = new Texture("tutorialText.png");
         sound = Gdx.audio.newSound(Gdx.files.internal("Menu1.wav"));
     }
 
@@ -35,10 +40,15 @@ public class LevelSelect extends ScreenAdapter {
             public boolean touchDown(int screenX, int screenY, int pointer, int button) {
                 cursorX = Gdx.input.getX();
                 cursorY = Gdx.graphics.getHeight() - Gdx.input.getY();
-                if (Gdx.input.isTouched()) {
-                    sound.play(0.25f);
-                    game.setScreen(new GameScreen(game));
+                if (cursorX >= tutorialX && cursorX <= tutorialX + 300) {
+                    if (cursorY >= tutorialY && cursorY <= tutorialY + 100) {
+                        if (Gdx.input.isTouched()) {
+                            sound.play(0.25f);
+                            game.setScreen(new Main(game));
+                        }
+                    }
                 }
+
                 return true;
             }
         });
@@ -51,6 +61,7 @@ public class LevelSelect extends ScreenAdapter {
 
         batch.begin();
         batch.draw(selectText, selectX, selectY, 500, 200);
+        batch.draw(tutorialText, tutorialX, tutorialY, 300, 100);
         batch.end();
 
     }
