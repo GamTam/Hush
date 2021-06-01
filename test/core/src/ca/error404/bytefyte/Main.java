@@ -93,7 +93,7 @@ public class Main {
 
 	public static boolean bill = false;
 
-	public Settings game;
+	public static Settings game;
 
 	/**
 	 * Pre: N/A

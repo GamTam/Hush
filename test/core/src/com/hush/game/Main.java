@@ -27,7 +27,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import com.hush.game.constants.Globals;
+import ca.error404.bytefyte.constants.Globals;
 import org.ini4j.Wini;
 
 import java.io.*;
@@ -61,7 +61,7 @@ public class Main implements Screen {
         this.game = game;
         cam = new OrthographicCamera();
         world = new World(new Vector2(0, 0/ Settings.PPM), true);
-        gameMap = new TiledGameMap("test/core/assets/TiledMaps/Tutorial(MidPoint).tmx", this);
+        gameMap = new TiledGameMap("test/core/assets/TiledMaps/Tutorial(MidPoint).tmx", this, game);
         gamePort = new StretchViewport(Settings.V_WIDTH /Settings.PPM,Settings.V_HEIGHT /Settings.PPM,cam);
         cam.position.set(gamePort.getWorldWidth() /2, gamePort.getWorldHeight() / 2, 0);
         cam.update();

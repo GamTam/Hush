@@ -74,8 +74,6 @@ public class Player extends GameObject {
     public float x;
     public float y;
     TextureRegion sprite;
-    Texture image = new Texture("KnightItem.png");
-    Texture newImage = new Texture("Item.png");
     Settings game;
     public boolean ByteFyte;
     //Sound sound = Gdx.audio.newSound(Gdx.files.internal("PowerUp1.wav"));

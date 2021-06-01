@@ -1,56 +1,89 @@
+ca/error404/bytefyte/chars/Madeline.java
+ ca.error404.bytefyte.chars.Madeline
+ ca.error404.bytefyte.chars.Madeline$1
+com/hush/game/Objects/TouchyObject.java
+ com.hush.game.Objects.TouchyObject
+com/hush/game/UI/Settings.java
+ com.hush.game.UI.Settings
+ com.hush.game.UI.Settings$1
+ com.hush.game.UI.Settings$2
+com/hush/game/Main.java
+ com.hush.game.Main
+ca/error404/bytefyte/chars/bosses/PeteyState.java
+ ca.error404.bytefyte.chars.bosses.PeteyState
+ ca.error404.bytefyte.chars.bosses.PeteyState$1
+ ca.error404.bytefyte.chars.bosses.PeteyState$2
+ ca.error404.bytefyte.chars.bosses.PeteyState$3
+ ca.error404.bytefyte.chars.bosses.PeteyState$4
+ ca.error404.bytefyte.chars.bosses.PeteyState$5
+ ca.error404.bytefyte.chars.bosses.PeteyState$6
+com/hush/game/Entities/StaticEnemy.java
+ com.hush.game.Entities.StaticEnemy
+com/hush/game/WinScreen.java
+ com.hush.game.WinScreen
+ com.hush.game.WinScreen$1
+ca/error404/bytefyte/GameObject.java
+ ca.error404.bytefyte.GameObject
+ca/error404/bytefyte/objects/Collider.java
+ ca.error404.bytefyte.objects.Collider
+com/hush/game/LevelSelect.java
+ com.hush.game.LevelSelect
+ com.hush.game.LevelSelect$1
+ca/error404/bytefyte/chars/bosses/Petey.java
+ ca.error404.bytefyte.chars.bosses.Petey
+com/hush/game/Objects/MovingWall.java
+ com.hush.game.Objects.MovingWall
+ca/error404/bytefyte/objects/Projectile.java
+ ca.error404.bytefyte.objects.Projectile
+ca/error404/bytefyte/chars/Badeline.java
+ ca.error404.bytefyte.chars.Badeline
+ ca.error404.bytefyte.chars.Badeline$1
+ ca.error404.bytefyte.chars.Badeline$STATE
 com/hush/game/Screens/MainMenu.java
  com.hush.game.Screens.MainMenu
  com.hush.game.Screens.MainMenu$1
-com/hush/game/constants/Globals.java
- com.hush.game.constants.Globals
-com/hush/game/World/Tags.java
- com.hush.game.World.Tags
-com/hush/game/SplashScreen.java
- com.hush.game.SplashScreen
- com.hush.game.SplashScreen$1
-com/hush/game/Screens/SplashScreen.java
- com.hush.game.Screens.SplashScreen
- com.hush.game.Screens.SplashScreen$1
-com/hush/game/MainMenu.java
- com.hush.game.MainMenu
- com.hush.game.MainMenu$1
-com/hush/game/SettingsScreen.java
- com.hush.game.SettingsScreen
- com.hush.game.SettingsScreen$1
-com/hush/game/Screens/GifDecoder.java
- com.hush.game.Screens.GifDecoder
- com.hush.game.Screens.GifDecoder$DixieMap
- com.hush.game.Screens.GifDecoder$GifFrame
-com/hush/game/GifDecoder.java
- com.hush.game.GifDecoder
- com.hush.game.GifDecoder$DixieMap
- com.hush.game.GifDecoder$GifFrame
-com/hush/game/World/WorldContactListener.java
- com.hush.game.World.WorldContactListener
-com/hush/game/Screens/SettingsScreen.java
- com.hush.game.Screens.SettingsScreen
- com.hush.game.Screens.SettingsScreen$1
-com/hush/game/Objects/Goal.java
- com.hush.game.Objects.Goal
-com/hush/game/Objects/TouchyObject.java
- com.hush.game.Objects.TouchyObject
+ca/error404/bytefyte/scene/menu/CharacterSelectSingle.java
+ ca.error404.bytefyte.scene.menu.CharacterSelectSingle
+ ca.error404.bytefyte.scene.menu.CharacterSelectSingle$1
+ ca.error404.bytefyte.scene.menu.CharacterSelectSingle$2
+ ca.error404.bytefyte.scene.menu.CharacterSelectSingle$3
+ ca.error404.bytefyte.scene.menu.CharacterSelectSingle$4
+ ca.error404.bytefyte.scene.menu.CharacterSelectSingle$5
+ ca.error404.bytefyte.scene.menu.CharacterSelectSingle$6
+ ca.error404.bytefyte.scene.menu.CharacterSelectSingle$7
+ ca.error404.bytefyte.scene.menu.CharacterSelectSingle$8
+ca/error404/bytefyte/ui/MenuCursor.java
+ ca.error404.bytefyte.ui.MenuCursor
+ca/error404/bytefyte/ui/PlayerHealth.java
+ ca.error404.bytefyte.ui.PlayerHealth
+ca/error404/bytefyte/constants/Tags.java
+ ca.error404.bytefyte.constants.Tags
+ca/error404/bytefyte/scene/menu/SaveSelect.java
+ ca.error404.bytefyte.scene.menu.SaveSelect
+ ca.error404.bytefyte.scene.menu.SaveSelect$1
+ ca.error404.bytefyte.scene.menu.SaveSelect$2
+ca/error404/bytefyte/HUD.java
+ ca.error404.bytefyte.HUD
+ca/error404/bytefyte/scene/BossRoom.java
+ ca.error404.bytefyte.scene.BossRoom
 com/hush/game/Entities/DynamicEnemy.java
  com.hush.game.Entities.DynamicEnemy
  com.hush.game.Entities.DynamicEnemy$1
 com/hush/game/Screens/WinScreen.java
  com.hush.game.Screens.WinScreen
  com.hush.game.Screens.WinScreen$1
-com/hush/game/UI/Settings.java
- com.hush.game.UI.Settings
-com/hush/game/Objects/DamageWall.java
- com.hush.game.Objects.DamageWall
-com/hush/game/Main.java
- com.hush.game.Main
-com/hush/game/Entities/Enemy.java
- com.hush.game.Entities.Enemy
- com.hush.game.Entities.Enemy$1
-com/hush/game/Entities/StaticEnemy.java
- com.hush.game.Entities.StaticEnemy
+com/hush/game/Objects/InputDetector.java
+ com.hush.game.Objects.InputDetector
+com/hush/game/MainMenu.java
+ com.hush.game.MainMenu
+ com.hush.game.MainMenu$1
+ca/error404/bytefyte/chars/Wall.java
+ ca.error404.bytefyte.chars.Wall
+com/hush/game/Screens/SettingsScreen.java
+ com.hush.game.Screens.SettingsScreen
+ com.hush.game.Screens.SettingsScreen$1
+ca/error404/bytefyte/objects/HairPoint.java
+ ca.error404.bytefyte.objects.HairPoint
 com/hush/game/states/PlayerState.java
  com.hush.game.states.PlayerState
  com.hush.game.states.PlayerState$1
@@ -59,32 +92,172 @@ com/hush/game/states/PlayerState.java
  com.hush.game.states.PlayerState$4
  com.hush.game.states.PlayerState$5
  com.hush.game.states.PlayerState$6
-com/hush/game/WinScreen.java
- com.hush.game.WinScreen
- com.hush.game.WinScreen$1
+ca/error404/bytefyte/scene/LoadBattleMap.java
+ ca.error404.bytefyte.scene.LoadBattleMap
+ca/error404/bytefyte/chars/DeathWall.java
+ ca.error404.bytefyte.chars.DeathWall
+com/hush/game/SettingsScreen.java
+ com.hush.game.SettingsScreen
+ com.hush.game.SettingsScreen$1
+com/hush/game/World/WorldContactListener.java
+ com.hush.game.World.WorldContactListener
+ca/error404/bytefyte/chars/MasterChief.java
+ ca.error404.bytefyte.chars.MasterChief
+com/hush/game/SplashScreen.java
+ com.hush.game.SplashScreen
+ com.hush.game.SplashScreen$1
+ca/error404/bytefyte/objects/BattleCam.java
+ ca.error404.bytefyte.objects.BattleCam
+ca/error404/bytefyte/constants/ScreenSizes.java
+ ca.error404.bytefyte.constants.ScreenSizes
+com/hush/game/World/Tags.java
+ com.hush.game.World.Tags
+ca/error404/bytefyte/scene/menu/TitleScreen.java
+ ca.error404.bytefyte.scene.menu.TitleScreen
+ca/error404/bytefyte/scene/VictoryScreen.java
+ ca.error404.bytefyte.scene.VictoryScreen
+ ca.error404.bytefyte.scene.VictoryScreen$1
+ca/error404/bytefyte/constants/ControllerButtons.java
+ ca.error404.bytefyte.constants.ControllerButtons
+com/hush/game/UI/HUD.java
+ com.hush.game.UI.HUD
+ca/error404/bytefyte/shaders/GrayscaleShader.java
+ ca.error404.bytefyte.shaders.GrayscaleShader
+com/hush/game/Screens/LoseScreen.java
+ com.hush.game.Screens.LoseScreen
+ com.hush.game.Screens.LoseScreen$1
+ca/error404/bytefyte/tools/CutscenePlayer.java
+ ca.error404.bytefyte.tools.CutscenePlayer
+ca/error404/bytefyte/objects/Laser.java
+ ca.error404.bytefyte.objects.Laser
+ ca.error404.bytefyte.objects.Laser$1
+com/hush/game/Objects/Goal.java
+ com.hush.game.Objects.Goal
+ca/error404/bytefyte/scene/menu/MenuScene.java
+ ca.error404.bytefyte.scene.menu.MenuScene
+ca/error404/bytefyte/scene/PlayRoom.java
+ ca.error404.bytefyte.scene.PlayRoom
+com/hush/game/Entities/Enemy.java
+ com.hush.game.Entities.Enemy
+ com.hush.game.Entities.Enemy$1
+ca/error404/bytefyte/scene/LoadBossRoom.java
+ ca.error404.bytefyte.scene.LoadBossRoom
+ca/error404/bytefyte/scene/menu/SettingsMenu.java
+ ca.error404.bytefyte.scene.menu.SettingsMenu
+ ca.error404.bytefyte.scene.menu.SettingsMenu$1
+ ca.error404.bytefyte.scene.menu.SettingsMenu$10
+ ca.error404.bytefyte.scene.menu.SettingsMenu$11
+ ca.error404.bytefyte.scene.menu.SettingsMenu$12
+ ca.error404.bytefyte.scene.menu.SettingsMenu$13
+ ca.error404.bytefyte.scene.menu.SettingsMenu$14
+ ca.error404.bytefyte.scene.menu.SettingsMenu$15
+ ca.error404.bytefyte.scene.menu.SettingsMenu$16
+ ca.error404.bytefyte.scene.menu.SettingsMenu$2
+ ca.error404.bytefyte.scene.menu.SettingsMenu$3
+ ca.error404.bytefyte.scene.menu.SettingsMenu$4
+ ca.error404.bytefyte.scene.menu.SettingsMenu$5
+ ca.error404.bytefyte.scene.menu.SettingsMenu$6
+ ca.error404.bytefyte.scene.menu.SettingsMenu$7
+ ca.error404.bytefyte.scene.menu.SettingsMenu$8
+ ca.error404.bytefyte.scene.menu.SettingsMenu$9
+com/hush/game/Screens/GifDecoder.java
+ com.hush.game.Screens.GifDecoder
+ com.hush.game.Screens.GifDecoder$DixieMap
+ com.hush.game.Screens.GifDecoder$GifFrame
+ca/error404/bytefyte/objects/GasterBlaster.java
+ ca.error404.bytefyte.objects.GasterBlaster
+ca/error404/bytefyte/constants/Globals.java
+ ca.error404.bytefyte.constants.Globals
+com/hush/game/Entities/Player.java
+ com.hush.game.Entities.Player
+ca/error404/bytefyte/chars/bosses/Boss.java
+ ca.error404.bytefyte.chars.bosses.Boss
+ca/error404/bytefyte/ui/ShowSongName.java
+ ca.error404.bytefyte.ui.ShowSongName
+ca/error404/bytefyte/chars/Sans.java
+ ca.error404.bytefyte.chars.Sans
+ca/error404/bytefyte/scene/menu/Vault.java
+ ca.error404.bytefyte.scene.menu.Vault
+ ca.error404.bytefyte.scene.menu.Vault$1
+ ca.error404.bytefyte.scene.menu.Vault$2
+com/hush/game/World/TiledGameMap.java
+ com.hush.game.World.TiledGameMap
+ca/error404/bytefyte/chars/Character.java
+ ca.error404.bytefyte.chars.Character
+ ca.error404.bytefyte.chars.Character$1
+ ca.error404.bytefyte.chars.Character$AnimationState
+ ca.error404.bytefyte.chars.Character$AttackState
+ ca.error404.bytefyte.chars.Character$MovementState
+ca/error404/bytefyte/chars/ShyGuy.java
+ ca.error404.bytefyte.chars.ShyGuy
+ca/error404/bytefyte/objects/MultiHit.java
+ ca.error404.bytefyte.objects.MultiHit
+ca/error404/bytefyte/Main.java
+ ca.error404.bytefyte.Main
+com/hush/game/Objects/DamageWall.java
+ com.hush.game.Objects.DamageWall
+ca/error404/bytefyte/scene/menu/MapSelect.java
+ ca.error404.bytefyte.scene.menu.MapSelect
+ ca.error404.bytefyte.scene.menu.MapSelect$1
+ ca.error404.bytefyte.scene.menu.MapSelect$2
+ ca.error404.bytefyte.scene.menu.MapSelect$3
+ ca.error404.bytefyte.scene.menu.MapSelect$4
+ ca.error404.bytefyte.scene.menu.MapSelect$5
+ ca.error404.bytefyte.scene.menu.MapSelect$6
+ ca.error404.bytefyte.scene.menu.MapSelect$7
+ ca.error404.bytefyte.scene.menu.MapSelect$8
+ca/error404/bytefyte/constants/Keys.java
+ ca.error404.bytefyte.constants.Keys
 com/hush/game/Screens/LevelSelect.java
  com.hush.game.Screens.LevelSelect
  com.hush.game.Screens.LevelSelect$1
-com/hush/game/Entities/Player.java
- com.hush.game.Entities.Player
-com/hush/game/LevelSelect.java
- com.hush.game.LevelSelect
- com.hush.game.LevelSelect$1
-com/hush/game/Objects/MovingWall.java
- com.hush.game.Objects.MovingWall
+com/hush/game/GifDecoder.java
+ com.hush.game.GifDecoder
+ com.hush.game.GifDecoder$DixieMap
+ com.hush.game.GifDecoder$GifFrame
+ca/error404/bytefyte/scene/BattleMap.java
+ ca.error404.bytefyte.scene.BattleMap
+ca/error404/bytefyte/scene/menu/MainMenu.java
+ ca.error404.bytefyte.scene.menu.MainMenu
+ ca.error404.bytefyte.scene.menu.MainMenu$1
+ ca.error404.bytefyte.scene.menu.MainMenu$2
+ ca.error404.bytefyte.scene.menu.MainMenu$3
+ ca.error404.bytefyte.scene.menu.MainMenu$4
+ ca.error404.bytefyte.scene.menu.MainMenu$5
+ ca.error404.bytefyte.scene.menu.MainMenu$6
+ ca.error404.bytefyte.scene.menu.MainMenu$7
+ ca.error404.bytefyte.scene.menu.MainMenu$8
+ca/error404/bytefyte/scene/ScreenWipe.java
+ ca.error404.bytefyte.scene.ScreenWipe
+ca/error404/bytefyte/chars/Kirby.java
+ ca.error404.bytefyte.chars.Kirby
 com/hush/game/World/B2WorldCreator.java
  com.hush.game.World.B2WorldCreator
 com/hush/game/Objects/StaticWall.java
  com.hush.game.Objects.StaticWall
+ca/error404/bytefyte/chars/Mario.java
+ ca.error404.bytefyte.chars.Mario
 com/hush/game/Entities/GameObject.java
  com.hush.game.Entities.GameObject
-com/hush/game/World/TiledGameMap.java
- com.hush.game.World.TiledGameMap
-com/hush/game/UI/HUD.java
- com.hush.game.UI.HUD
+ca/error404/bytefyte/chars/Luigi.java
+ ca.error404.bytefyte.chars.Luigi
+ca/error404/bytefyte/ui/Button.java
+ ca.error404.bytefyte.ui.Button
+ca/error404/bytefyte/tools/WorldContactListener.java
+ ca.error404.bytefyte.tools.WorldContactListener
+com/hush/game/Screens/SplashScreen.java
+ com.hush.game.Screens.SplashScreen
+ com.hush.game.Screens.SplashScreen$1
+ca/error404/bytefyte/scene/menu/CharacterSelect.java
+ ca.error404.bytefyte.scene.menu.CharacterSelect
+ ca.error404.bytefyte.scene.menu.CharacterSelect$1
+ ca.error404.bytefyte.scene.menu.CharacterSelect$2
+ ca.error404.bytefyte.scene.menu.CharacterSelect$3
+ ca.error404.bytefyte.scene.menu.CharacterSelect$4
+ ca.error404.bytefyte.scene.menu.CharacterSelect$5
+ ca.error404.bytefyte.scene.menu.CharacterSelect$6
+ ca.error404.bytefyte.scene.menu.CharacterSelect$7
+ ca.error404.bytefyte.scene.menu.CharacterSelect$8
 com/hush/game/LoseScreen.java
  com.hush.game.LoseScreen
  com.hush.game.LoseScreen$1
-com/hush/game/Screens/LoseScreen.java
- com.hush.game.Screens.LoseScreen
- com.hush.game.Screens.LoseScreen$1

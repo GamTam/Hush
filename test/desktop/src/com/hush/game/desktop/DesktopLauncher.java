@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) throws IOException {
-		new ca.error404.bytefyte.constants.Globals();
+		new Globals();
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 
 		// Window settings

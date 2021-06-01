@@ -8,6 +8,7 @@ import com.badlogic.gdx.controllers.Controller;
 import com.badlogic.gdx.controllers.ControllerAdapter;
 import com.badlogic.gdx.controllers.Controllers;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.utils.Array;
 import com.hush.game.Main;
 import com.hush.game.Screens.SplashScreen;
 
@@ -36,14 +37,11 @@ public class Settings extends Game {
 	public static AssetManager audioManager = new AssetManager();
 	public static AssetManager manager = new AssetManager();
 
-
-
-
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 		reloadControllers();
-		System.out.println(musicVolume);
+		System.out.println("a");
 		setScreen(new SplashScreen(this));
 	}
 
