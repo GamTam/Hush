@@ -140,8 +140,14 @@ public class Main implements Screen {
 
         world.step(1/60f,6,2);
 
-        cam.position.x = player.x;
-        cam.position.y = player.y;
+        try {
+            cam.position.x = player.b2body.getTransform().getPosition().x;
+            cam.position.y = player.b2body.getTransform().getPosition().y;
+        } catch (Exception e) {
+            cam.position.x = player.x;
+            cam.position.y = player.y;
+        }
+
         cam.update();
 
         gameObject.addAll(gameObjectAdd);
