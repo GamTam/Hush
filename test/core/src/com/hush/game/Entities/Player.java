@@ -30,7 +30,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static com.hush.game.UI.HUD.invis;
+import static com.hush.game.UI.HUD.invisInv;
 import static com.hush.game.UI.HUD.stun;
 
 public class Player extends GameObject {
@@ -103,7 +103,7 @@ public class Player extends GameObject {
         stateTimer = 0;
         maxStamina = 10;
         stamina = maxStamina;
-        maxSound = 100;
+        maxSound = 75;
         sound = 0;
         recharing = false;
         walkSound = false;
@@ -155,15 +155,18 @@ public class Player extends GameObject {
 
         }
         if (Gdx.input.isKeyJustPressed(Input.Keys.Q)) {
-            HUD.invisCounter();
-            invis = true;
+            if(!invis && invisInv != 0){
+                HUD.invisCounter();
+                invis = true;
+            }
+
         }
 
         if (Gdx.input.isKeyJustPressed(Input.Keys.F5)) {
             launchByteFyte();
         }
 
-        if (!recharing) {
+        if (!recharing && !moveVector.isZero()) {
             running = Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT);
         }
     }
@@ -231,11 +234,13 @@ public class Player extends GameObject {
         this.deltaTime = deltaTime;
         handleInput(deltaTime);
         state.update();
+        //System.out.println(state.getCurrentState());
         if (deadState && b2body != null) {
             remove = true;
         }
         if(invis && invisTimer > 0){
             invisTimer = Math.max(0, invisTimer - deltaTime);
+
         } else {
             invis = false;
             invisTimer = invisDuration;
@@ -247,7 +252,7 @@ public class Player extends GameObject {
             recharing = !(stamina == maxStamina);
         }
         if(walkSound){
-            sound = Math.min(sound + 1f, maxSound);
+            sound = Math.min(sound + 0.5f, maxSound);
         }else if(runSound){
             sound = Math.min(sound + 5f, maxSound);
         }else{

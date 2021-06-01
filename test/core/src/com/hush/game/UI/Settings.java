@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.Hashtable;
 
 public class Settings extends Game {
 	public SpriteBatch batch;
@@ -37,11 +38,15 @@ public class Settings extends Game {
 	public static AssetManager audioManager = new AssetManager();
 	public static AssetManager manager = new AssetManager();
 
+	public static Hashtable<String, Integer> highScore;
+	public static Integer completion = 0;
+
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
+		highScore = new Hashtable<>();
+		System.out.println(musicVolume);
 		reloadControllers();
-		System.out.println("a");
 		setScreen(new SplashScreen(this));
 	}
 
@@ -85,7 +90,9 @@ public class Settings extends Game {
 	}
 
 	@Override
-	public void render () { super.render(); }
+	public void render () {
+		super.render();
+	}
 
 
 
