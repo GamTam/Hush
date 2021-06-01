@@ -1,22 +1,22 @@
 package com.hush.game.UI;
 
+import ca.error404.bytefyte.constants.ControllerButtons;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Music;
+import com.badlogic.gdx.controllers.Controller;
+import com.badlogic.gdx.controllers.ControllerAdapter;
+import com.badlogic.gdx.controllers.Controllers;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Array;
 import com.hush.game.Main;
-import com.hush.game.constants.Globals;
-import org.ini4j.Wini;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.Random;
 
 public class Settings extends Game {
 	public SpriteBatch batch;
@@ -41,8 +41,48 @@ public class Settings extends Game {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
+		reloadControllers();
 		System.out.println(musicVolume);
 		setScreen(new Main(this));
+	}
+
+	public static void reloadControllers() {
+		// makes sure that there are controllers plugged in
+		if (Controllers.getControllers().size > 0) {
+			int currentController = 0;
+
+			// loops through all controllers
+			for (int i=0; i < Controllers.getControllers().size; i++) {
+				Controller cont = Controllers.getControllers().get(i);
+
+				// Checks for Xbox controllers
+				if (ControllerButtons.isXboxController(cont)) {
+					if (currentController < 4) {
+						ca.error404.bytefyte.Main.controllers[currentController] = cont;
+						currentController += 1;
+						ca.error404.bytefyte.Main.recentButtons.put(cont, new Array<Integer>());
+
+						// Creates controller
+						cont.addListener(new ControllerAdapter() {
+							public boolean buttonDown(Controller controller, int buttonIndex) {
+								ca.error404.bytefyte.Main.recentButtons.get(controller).add(buttonIndex);
+								return false;
+							}
+						});
+					}
+
+					// Add controller to controller array
+					ca.error404.bytefyte.Main.allControllers.add(cont);
+					ca.error404.bytefyte.Main.recentButtons.put(cont, new Array<Integer>());
+					cont.addListener(new ControllerAdapter() {
+						public boolean buttonDown(Controller controller, int buttonIndex) {
+							ca.error404.bytefyte.Main.recentButtons.get(controller).add(buttonIndex);
+							return false;
+						}
+					});
+				}
+			}
+		}
 	}
 
 	@Override
@@ -61,7 +101,7 @@ public class Settings extends Game {
 	 */
 	public Music newSong(String song) {
 		// Locate file
-		String fileName = "songdata.tsv";
+		String fileName = "songdata hush.tsv";
 
 		ClassLoader classLoader = Main.class.getClassLoader();
 		InputStream inputStream = classLoader.getResourceAsStream(fileName);

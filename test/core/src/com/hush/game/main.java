@@ -1,16 +1,18 @@
 package com.hush.game;
 
+import ca.error404.bytefyte.constants.Globals;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
-import com.hush.game.Entities.Enemy;
 import com.hush.game.Entities.GameObject;
 import com.hush.game.Entities.Player;
+import com.hush.game.Objects.InputDetector;
 import com.hush.game.Objects.MovingWall;
 import com.hush.game.UI.HUD;
 import com.hush.game.UI.Settings;
@@ -20,20 +22,14 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import com.hush.game.constants.Globals;
 import org.ini4j.Wini;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Random;
-
-import static com.hush.game.World.TiledGameMap.creator;
 
 
 public class Main implements Screen {
@@ -54,13 +50,26 @@ public class Main implements Screen {
     Texture stunImage = new Texture("ScrollThunder.png");
 
 
+    public int[] correctKey = { Input.Keys.B,
+                                Input.Keys.Y,
+                                Input.Keys.T,
+                                Input.Keys.E,
+                                Input.Keys.SPACE,
+                                Input.Keys.F,
+                                Input.Keys.Y,
+                                Input.Keys.T,
+                                Input.Keys.E };
+
+    public static ArrayList<Integer> byteKey = new ArrayList<>();
+    public static InputListener listener;
+
     public Main(Settings game){
         Settings.manager.load("sprites/player.atlas", TextureAtlas.class);
         Settings.manager.finishLoading();
         this.game = game;
         cam = new OrthographicCamera();
         world = new World(new Vector2(0, 0/ Settings.PPM), true);
-        gameMap = new TiledGameMap("test/core/assets/TiledMaps/Tutorial(MidPoint).tmx", this);
+        gameMap = new TiledGameMap("test/core/assets/TiledMaps/Tutorial(MidPoint).tmx", this, game);
         gamePort = new StretchViewport(Settings.V_WIDTH /Settings.PPM,Settings.V_HEIGHT /Settings.PPM,cam);
         cam.position.set(gamePort.getWorldWidth() /2, gamePort.getWorldHeight() / 2, 0);
         cam.update();
@@ -71,6 +80,23 @@ public class Main implements Screen {
         Settings.music.play();
         game.music.setVolume(Settings.musicVolume / 10f);
         hud = new HUD(this);
+
+
+
+        listener = new InputListener() {
+            @Override
+            public boolean keyDown(InputEvent event, int keycode) {
+                byteKey.add(keycode);
+                System.out.println("a");
+                return super.keyDown(event, keycode);
+            }
+        };
+
+        new InputDetector(listener);
+    }
+
+    public Main() {
+
     }
 
     public TextureAtlas getAtlas(){
