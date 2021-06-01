@@ -2,27 +2,25 @@ package com.hush.game.UI;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.utils.Array;
 import com.hush.game.Main;
-import com.hush.game.constants.Globals;
-import org.ini4j.Wini;
+import com.hush.game.SplashScreen;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.Random;
 
 public class Settings extends Game {
 	public SpriteBatch batch;
 	public static final int V_WIDTH = 480;
 	public static final int V_HEIGHT = 270;
 	public static final float PPM = 100;
+
+	public static boolean dead = false;
+	public static boolean win = false;
 
 	public static String songName;
 	public static String internalSongName;
@@ -42,7 +40,7 @@ public class Settings extends Game {
 	public void create () {
 		batch = new SpriteBatch();
 		System.out.println(musicVolume);
-		setScreen(new Main(this));
+		setScreen(new SplashScreen(this));
 	}
 
 	@Override

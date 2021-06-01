@@ -11,6 +11,8 @@ import java.io.IOException;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) throws IOException {
+
+
 		new Globals();
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 
@@ -38,9 +40,9 @@ public class DesktopLauncher {
 		}
 
 		config.title = "Hush";
-		config.resizable = false;
-		config.width = 1920;
-		config.height = 1080;
+		config.resizable = true;
+		config.width = 1280;
+		config.height = 720;
 		new LwjglApplication(new Settings(), config);
 
 	}
