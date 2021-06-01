@@ -2,16 +2,14 @@ package com.hush.game.UI;
 
 import ca.error404.bytefyte.constants.ControllerButtons;
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.controllers.Controller;
 import com.badlogic.gdx.controllers.ControllerAdapter;
 import com.badlogic.gdx.controllers.Controllers;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.utils.Array;
 import com.hush.game.Main;
+import com.hush.game.Screens.SplashScreen;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -23,6 +21,9 @@ public class Settings extends Game {
 	public static final int V_WIDTH = 480;
 	public static final int V_HEIGHT = 270;
 	public static final float PPM = 100;
+
+	public static boolean dead = false;
+	public static boolean win = false;
 
 	public static String songName;
 	public static String internalSongName;
@@ -43,7 +44,7 @@ public class Settings extends Game {
 		batch = new SpriteBatch();
 		reloadControllers();
 		System.out.println(musicVolume);
-		setScreen(new Main(this));
+		setScreen(new SplashScreen(this));
 	}
 
 	public static void reloadControllers() {
@@ -89,7 +90,7 @@ public class Settings extends Game {
 	public void render () { super.render(); }
 
 
-	
+
 	@Override
 	public void dispose () {
 		//
