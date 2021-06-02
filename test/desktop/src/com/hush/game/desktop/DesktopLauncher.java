@@ -44,6 +44,7 @@ public class DesktopLauncher {
 			try {
 				ScreenSizes.screenSize = Integer.parseInt(ini.get("Settings", "screen size"));
 				ca.error404.bytefyte.Main.musicVolume = Integer.parseInt(ini.get("Settings", "music volume"));
+				Settings.musicVolume = Integer.parseInt(ini.get("Settings", "music volume"));
 				ca.error404.bytefyte.Main.cutsceneVolume = Integer.parseInt(ini.get("Settings", "cutscene volume"));
 				ca.error404.bytefyte.Main.sfxVolume = Integer.parseInt(ini.get("Settings", "sfx volume"));
 				ScreenSizes.fullScreen = Boolean.parseBoolean(ini.get("Settings", "fullscreen"));

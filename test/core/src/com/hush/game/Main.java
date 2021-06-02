@@ -71,7 +71,7 @@ public class Main implements Screen {
         cam = new OrthographicCamera();
         world = new World(new Vector2(0, 0/ Settings.PPM), true);
 
-        gameMap = new TiledGameMap("test/core/assets/TiledMaps/" + LevelSelect.mapSelect + ".tmx", this);
+        gameMap = new TiledGameMap("test/core/assets/TiledMaps/" + LevelSelect.mapSelect + ".tmx", this, game);
         // loads save data and assigns variables
         File settings = new File(Globals.workingDirectory + "settings.ini");
         try {
@@ -88,7 +88,12 @@ public class Main implements Screen {
 
         b2dr = new Box2DDebugRenderer();
         world.setContactListener(new WorldContactListener());
-        Settings.music = game.newSong("hub");
+
+        if (!Settings.songName.equalsIgnoreCase(LevelSelect.mapSelect) ) {
+            Settings.music = game.newSong(LevelSelect.mapSelect);
+
+          if (Settings.music == null) { Settings.music = game.newSong("menu weird"); }
+        }
         Settings.music.play();
         game.music.setVolume(Settings.musicVolume / 10f);
         hud = new HUD(this);
@@ -111,13 +116,11 @@ public class Main implements Screen {
     public void update(float dt) {
         if (player.win) {
             game.setScreen(new WinScreen(game));
-            Settings.music.stop();
             player.win = false;
             gameObject.clear();
         }
         if (player.pDead) {
             game.setScreen(new LoseScreen(game));
-            Settings.music.stop();
             player.pDead = false;
             gameObject.clear();
         }

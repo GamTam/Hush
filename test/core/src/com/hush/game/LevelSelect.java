@@ -32,6 +32,7 @@ public class LevelSelect extends ScreenAdapter {
     float quitY = buttonHeight;
 
     public LevelSelect(Settings game) {
+        Main.gameObject.clear();
         this.game = game;
         shapeRenderer = new ShapeRenderer();
         batch = new SpriteBatch();

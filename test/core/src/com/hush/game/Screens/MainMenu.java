@@ -49,6 +49,12 @@ public class MainMenu extends ScreenAdapter {
 
     @Override
     public void show(){
+        if (!Settings.songName.equalsIgnoreCase("TitleTheme")) {
+            Settings.music.stop();
+            Settings.music = game.newSong("TitleTheme");
+            Settings.music.play();
+        }
+
         Gdx.input.setInputProcessor(new InputAdapter() {
             @Override
             public boolean touchDown(int screenX, int screenY, int pointer, int button) {

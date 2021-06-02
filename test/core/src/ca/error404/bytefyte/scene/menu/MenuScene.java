@@ -227,7 +227,9 @@ public class MenuScene implements Screen {
 
             // Starts app
             Main.game.create();
-            game.music.stop();
+            try {
+                game.music.stop();
+            } catch (Exception ignored) {}
         } catch (IOException e) {
             e.printStackTrace();
         }

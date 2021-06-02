@@ -9,7 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.hush.game.Main;
 import com.hush.game.UI.Settings;
-import com.hush.game.constants.Globals;
+import ca.error404.bytefyte.constants.Globals;
 import org.ini4j.Wini;
 
 import java.io.File;

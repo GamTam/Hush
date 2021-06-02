@@ -13,7 +13,7 @@ import com.hush.game.Main;
 import com.hush.game.Screens.MainMenu;
 import com.hush.game.UI.HUD;
 import com.hush.game.UI.Settings;
-import com.hush.game.constants.Globals;
+import ca.error404.bytefyte.constants.Globals;
 import org.ini4j.Wini;
 
 import java.io.File;

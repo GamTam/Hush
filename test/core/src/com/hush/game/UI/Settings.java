@@ -133,6 +133,10 @@ public class Settings extends Game {
 
 				i++;
 			}
+
+			if (keepLooping) {
+				return null;
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -140,6 +144,8 @@ public class Settings extends Game {
 		if (songLoopEnd == -1) {
 			songLoopEnd = Double.POSITIVE_INFINITY;
 		}
+
+		songName = internalSongName;
 
 		audioManager.load("audio/music/" + internalSongName + ".wav", Music.class);
 		audioManager.finishLoading();
